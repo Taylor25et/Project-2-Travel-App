@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat+Alternates:ital,wght@1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    padding: 0;
+}
+
+.title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 55px;
+    color: blue
+}
+
+.divider {
+    border-top: 1px solid black;
+}
+
+.section-divide {
+    border-bottom: 2px solid black;
+}
+
+
+.p-1{
+    background-color: rgba(168, 218, 241, 0.308);
+}

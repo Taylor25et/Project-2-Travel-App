@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="themepark.css">
+    <title>Travel App | </title>
+
+</head>
+
+<body>
+    <header class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(42, 69, 104)">
+            <div class="col-md-4 cotainer-fluid">
+                <h1 class="p-3"><a class="navbar-brand" href="#">Travel App</a></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse form-inline col-md-6" id="navbarMain">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">Water Parks</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">Theme Parks</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">Roller Coasters</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">Resorts</a>
+                    </li>
+                </ul>
+            </div>
+            </div class="collapse navbar-collapse form-inline col" id="navbarMain">
+            <form class="navbar-nav">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
+                <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom"
+                    title="Profile Login"><i class="fa-solid fa-user fa-lg"></i></button>
+            </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="map">
+            </div>
+        </section>
+        <section class="my-5 d-flex justify-content-center">
+            <div>
+                <h1 class="title">Theme Parks</h1>
+                <hr class="divider">
+            </div>
+        </section>
+        <section class="row p-4 m-0 section-divide">
+            
+            <div class="col text-center">
+                <h4>Magic Kingdom Walt Disney World </h4>
+                <p>Lake Buena Vista, FL 32836</p>
+                <br>
+                <div class="p-2">
+                <p>The world’s most famous theme park, Magic Kingdom Park at Walt Disney World® Resort in Orlando is the place where childhood dreams come true. With more than 40 unforgettable attractions, themed dining and shopping, and countless surprises, your imagination is the limit when you’re at “The Most Magical Place on Earth</p>
+                    <ul class="text-left">
+                        <li><b>Visits a year: 20.96 million</b></li>
+                        <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/magic-kingdom/"> Magic Kingdom Walt Disney World Website</a></li>
+                        <li><b>Description Source:</b><a href=" https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/magic-kingdom/">  https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/magic-kingdom/</a></li>
+                    </ul>
+                    <button class="p-1">Save This Park!</button>    
+                </div>
+            </div>
+            <div class="col">
+                <img src="../../img/themepark1.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                    style="width: 40rem">
+            </div>
+        </section>
+
+        <!-- Create the other parks using the below format; just swap the old info with the new one starting with Blizzard Beach  -->
+
+        <section class="row p-4 m-0 section-divide">
+            
+            <div class="col text-center">
+                <h4>Disney’s Animal Kingdom </h4>
+                <p>2901 Osceola Pkwy, Bay Lake, FL 34747</p>
+                <br>
+                <div class="p-2">
+                    <p> At Disney’s Animal Kingdom Theme Park at Walt Disney World® Resort, you can explore throughout the day and into the night on an adventure into a world alive with magic. Visit a distant world with floating mountains or back on Earth view thousands of animals in their natural habitats — all without leaving Orlando. </p>
+                        <ul class="text-left">
+                            <li><b>Visits a year: 13.89 million</b></li>
+                            <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/animal-kingdom/ ">Disney’s Animal Kingdom Website </a></li>
+                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/ "> https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/ </a></li>
+                        </ul>
+                    </div>
+                    <button class="p-1" >Save This Park!</button>
+            </div>
+            <div class="col">
+                <img src="../../img/themepark2.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                    style="width: 40rem">
+            </div>
+        </section>
+
+        <section class="row p-4 m-0 section-divide">
+            
+            <div class="col text-center">
+                <h4> Epcot Walt Disney World</h4>
+                <p>200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+                <br>
+                <div class="p-2">
+                    <p> Launched in 1982, EPCOT at Walt Disney World Resort invites you to explore global culture, space, the seas and Mother Nature — not to mention the future — all without leaving present-day Orlando. </p>
+                        <ul class="text-left">
+                            <li><b>Visits a year: 12.44 million</b></li>
+                            <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/epcot/ ">Epcot Walt Disney World Website </a></li>
+                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/ "> https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/  </a></li>
+                        </ul>
+                    </div>
+                    <button class="p-1" >Save This Park!</button>
+            </div>
+            <div class="col">
+                <img src="../../img/themepark3.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                    style="width: 40rem">
+            </div>
+        </section>
+
+        <section class="row p-4 m-0 section-divide">
+            
+            <div class="col text-center">
+                <h4>Universal Studios Orlando  </h4>
+                <p>6000 Universal Blvd, Orlando, FL 32819</p>
+                <br>
+                <div class="p-2">
+                    <p> Play, scream and laugh with some of the biggest characters in movies, TV and pop culture at Universal Orlando Resort! In addition to three incredible theme parks, including a water theme park, Universal Orlando Resort offers entertainment, shopping and dining at Universal CityWalk, as well as onsite accommodations for every style and budget. It’s the only place in Orlando where you can soar over Hogwarts™ with Harry Potter™, swing through city streets with Spider-Man, and conquer the mighty Krakatau volcano — among other unforgettable adventures. Experience it for yourself during your next trip to Orlando! </p>
+                        <ul class="text-left">
+                            <li><b>Visits a year: 10.92 million</b></li>
+                            <li><b>Website:</b><a href="https://www.universalorlando.com/web/en/us ">Universal Studios Orlando Website </a></li>
+                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/"> https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/ </a></li>
+                        </ul>
+                    </div>
+                    <button class="p-1" >Save This Park!</button>
+            </div>
+            <div class="col">
+                <img src="../../img/themepark5.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                    style="width: 40rem">
+            </div>
+        </section>
+
+        <section class="row p-4 m-0 section-divide">
+            
+            <div class="col text-center">
+                <h4> Disneyland Anaheim</h4>
+                <p>1313 Disneyland Dr, Anaheim, CA 92802</p>
+                <br>
+                <div class="p-2">
+                    <p> Located in the heart of Anaheim, the Disneyland® Resort offers a memorable experience for visitors of all ages. With over 60 incredible attractions, magical parades, and world-renowned treats, it’s no wonder Disneyland Park holds the title, “The Happiest Place on Earth </p>
+                        <ul class="text-left">
+                            <li><b>Visits a year: 18.66 million</b></li>
+                            <li><b>Website:</b><a href="https://disneyland.disney.go.com/  ">Disneyland Anaheimbsite </a></li>
+                            <li><b>Description Source:</b><a href="https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/ "> https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/  </a></li>
+                        </ul>
+                    </div>
+                    <button class="p-1">Save This Park!</button>
+            </div>
+            <div class="col">
+                <img src="src/img/pic 4.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                    style="width: 40rem">
+            </div>
+        </section>
+
+    </main>
+
+</body>
+<!-- <script src="./waterpark.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/79cda57a21.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+<script>
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script>
+<script>
+    function initMap() {
+        var options = {
+            zoom: 10,
+            center: { lat: 28.3772, lng: -81.5707 }
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+        var markers = [
+            {
+                coords: { lat: 28.3658, lng: -81.5296 },
+                content: '<h2>Magic Kingdom Walt Disney World, Address: Lake Buena Vista, FL 32836 </h2>' //1
+            },
+            {
+                coords: { lat: 28.3747, lng: -81.5494},
+                content: '<h3>Epcot Walt Disney World, 200 Epcot Center Dr, Lake Buena Vista, FL 32830 </h3>' //2
+
+            },
+
+            {
+                coords: { lat: 28.3597, lng: - 81.5916},
+                content: '<h1> Disney’s Animal Kingdom, Address: 2901 Osceola Pkwy, Bay Lake, FL 34747 </h1>' //3
+
+            },
+
+            {
+                coords: { lat: 28.4743, lng: -81.4678 },
+                content: '<h1>Universal Studios Orlando, 6000 Universal Blvd, Orlando, FL 32819   </h1>'//4
+
+            },
+
+            {
+                coords: { lat: 33.8121, lng: -117.9190 },
+                content: '<h1> Disneyland Anaheim, Address:  1313 Disneyland Dr, Anaheim, CA 92802  </h1>'
+
+            }
+
+        ];
+
+        //Loop through markers
+
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+
+
+        //Add Marker Function
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                // icon: 'http://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            });
+
+
+            //check content
+            if (props.content) {
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+
+                });
+
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+            }
+
+        }
+
+    }
+</script>
+
+</html>
