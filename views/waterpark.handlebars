@@ -11,19 +11,19 @@
             <div class="collapse navbar-collapse form-inline col-md-6" id="navbarMain">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="waterpark.handlebars">Water Parks</a>
+                        <a class="nav-link" href="/waterpark">Water Parks</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Theme Parks</a>
+                        <a class="nav-link" href="/themepark">Theme Parks</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Roller Coasters</a>
+                        <a class="nav-link" href="/rollercoaster">Roller Coasters</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Resorts</a>
+                        <a class="nav-link" href="/resort">Resorts</a>
                     </li>
                 </ul>
             </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="col">
-                <img src="../../public/img/water-park-bg.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
+                <img src="../img/water-park-bg.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
                     style="width: 40rem">
             </div>
         </section>
@@ -105,7 +105,7 @@
                 <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../public/img/blizzard-beach-img.jpg" class="rounded float-right" alt="Blizzard Beach image"
+                <img src="../img/blizzard-beach-img.jpg" class="rounded float-right" alt="Blizzard Beach image"
                     style="width: 40rem">
             </div>
         </section>
@@ -138,7 +138,7 @@
                 <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../public/img/universal-volcano-img.jpg" class="rounded float-right"
+                <img src="../img/volcano bay.jpeg" class="rounded float-right"
                     alt="Universal's Volcano Bay image" style="width: 40rem">
             </div>
         </section>
@@ -171,7 +171,7 @@
                 <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../public/img/atlantis-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
+                <img src="../img/atlantis-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
                     style="width: 40rem">
             </div>
         </section>
@@ -201,87 +201,88 @@
                 <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
             <div class="col">
-                <img src="../../public/img/aquatica-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
+                <img src="../img/aquatica-img.jpg" class="rounded float-right" alt="Atlantis Aquaventure image"
                     style="width: 40rem">
             </div>
         </section>
     </main>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script>
-    <script>
-    function initMap() {
-        var options = {
-            zoom: 10,
-            center: { lat: 28.3772, lng: -81.5707 }
-        }
+    
 
-        var map = new google.maps.Map(document.getElementById('map'), options);
+    
+  <script>
+function initMap(){
+var options = {
+ zoom:7,
+ center:{lat:28.3772,lng:-81.5707}
+} 
 
-
-        var markers = [
-            {
-                coords: { lat: 28.3658, lng: -81.5296 },
-                content: '<h1> Typhoon Lagoon at Walt Disney World Resort, Address: 1145 E Buena Vista Dr, Orlando, FL 32830, Visits a year: 2.25 million  </h1>'
-            },
-            {
-                coords: { lat: 28.3513, lng: -81.5763 },
-                content: '<h1>Blizzard Beach, Address: 1534 Blizzard Beach Drive, Orlando, FL 32836, Visits a year: 1.98 million</h1>'
-
-            },
-
-            {
-                coords: { lat: 28.4615, lng: -81.4731 },
-                content: '<h1>Universal’s Volcano Bay, Address: 6000 Universal Blvd, Orlando, FL 32819, Visits a year: 1.81 million   </h1>'
-
-            },
-
-            {
-                coords: { lat: 28.4153, lng: -81.4554 },
-                content: '<h1>Aquatica, Address: 5800 Water Play Way, Orlando, FL 32821,Visits a year: 1.53 million  </h1>'
-
-            },
-
-            {
-                coords: { lat: 25.0862, lng: -77.3238 },
-                content: '<h1> Atlantis Aquaventure, Address: One Casino Drive, Suite 42, Paradise Island, Bahamas, Visits a year: 1.81 million   </h1>'
-
-            }
-
-        ];
-
-        //Loop through markers
-
-        for (var i = 0; i < markers.length; i++) {
-            addMarker(markers[i]);
-        }
+var map = new google.maps.Map(document.getElementById('map'), options);
 
 
-        //Add Marker Function
-        function addMarker(props) {
-            var marker = new google.maps.Marker({
-                position: props.coords,
-                map: map,
-                icon: 'http://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-            });
+var markers = [
+{
+ coords:{lat:28.4188,lng:-81.5818},
+ content:'<h1> Magic Kingdom Walt Disney World, Address: Lake Buena Vista, FL 32836, Visits a year: 20.96 million </h1>'
+},
+{
+ coords:{lat:33.8121,lng:-117.9190},
+ content:'<h1>Disneyland Anaheim, Address:  1313 Disneyland Dr, Anaheim, CA 92802, Visits a year: 18.66 million </h1>'
+
+},
+
+{
+ coords:{lat:28.4615,lng:-81.4731},
+ content:'<h1>Universal’s Volcano Bay, Address: 6000 Universal Blvd, Orlando, FL 32819, Visits a year: 1.81 million   </h1>'
+ 
+},
+
+{
+ coords:{lat:28.4153,lng:-81.4554},
+ content:'<h1>Aquatica, Address: 5800 Water Play Way, Orlando, FL 32821,Visits a year: 1.53 million  </h1>'
+
+},
+
+{
+ coords:{lat:25.0862,lng:-77.3238},
+ content:'<h1> Atlantis Aquaventure, Address: One Casino Drive, Suite 42, Paradise Island, Bahamas, Visits a year: 1.81 million   </h1>'
+
+}
+
+];
+
+//Loop through markers
+
+for(var i= 0; i<markers.length; i++){
+ addMarker(markers[i]);
+}
 
 
-            //check content
-            if (props.content) {
-                var infoWindow = new google.maps.InfoWindow({
-                    content: props.content
+//Add Marker Function
+function addMarker(props){
+ var marker = new google.maps.Marker({
+ position:props.coords,
+ map:map,
+ icon:'http://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+});
 
-                });
 
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
-                });
-            }
+//check content
+if(props.content){
+ var infoWindow = new google.maps.InfoWindow({
+ content:props.content
+ 
+});
 
-        }
+marker.addListener('click', ()=>{
+infoWindow.open(map, marker);
+});
+}
 
-    }
+}
+
+}
 </script>
 
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQVDg-KzR2HpDshaYll5soqQuNdg5vZiA&callback=initMap"></script>
 
