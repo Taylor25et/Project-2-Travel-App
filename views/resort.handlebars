@@ -1,17 +1,18 @@
-<header class="w-100">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(42, 69, 104)">
-            <div class="col-md-4 cotainer-fluid">
-                <h1 class="p-3"><a class="navbar-brand" href="#">TravelAlot</a></h1>
+<header id="home" class="w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-around p-4" style="background-color: rgb(42, 69, 104)">
+        <div class="d-flex justify-content-center p-0">
+            <div class="cotainer-fluid">
+                <h1 class="p-1"><a class="navbar-brand" style="font-style:italic; font-size:x-large" href="#">TravAlot</a></h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
 
-            <div class="collapse navbar-collapse form-inline col-md-6" id="navbarMain">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse form-inline" id="navbarMain">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/waterpark">Water Parks</a>
@@ -25,19 +26,22 @@
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/resort">Resorts</a>
                     </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="/user">Profile</a>
+                    </li>
                 </ul>
             </div>
-            </div class="collapse navbar-collapse form-inline col" id="navbarMain">
-            <form class="navbar-nav">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
-            </form>
-                <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom"
-                        title="Profile"><a href="/login"><i class="fa-solid fa-user fa-lg"
-                                style="color: white;"></i></a></button>
+            <div class="collapse navbar-collapse form-inline" id="navbarMain">
+                <form class="navbar-nav">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
+                </form>
+                <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom" title="Login"><a
+                        href="/login"><i class="fa-solid fa-user fa-lg" style="color: white;"></i></a></button>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
     <main style="background-color: white;">
         <section>
             <div id="map">

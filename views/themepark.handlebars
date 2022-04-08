@@ -1,18 +1,20 @@
-
-    <header class="w-100">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(42, 69, 104)">
-            <div class="col-md-4 cotainer-fluid">
-                <h1 class="p-3"><a class="navbar-brand" href="#">TravAlot</a></h1>
+<header id="home" class="w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-around p-4"
+        style="background-color: rgb(42, 69, 104)">
+        <div class="d-flex justify-content-center p-0">
+            <div class="cotainer-fluid">
+                <h1 class="p-1"><a class="navbar-brand" style="font-style:italic; font-size:x-large"
+                        href="#">TravAlot</a></h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
 
-            <div class="collapse navbar-collapse form-inline col-md-6" id="navbarMain">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse form-inline" id="navbarMain">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item p-3">
-                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/waterpark">Water Parks</a>
@@ -26,147 +28,173 @@
                     <li class="nav-item p-3">
                         <a class="nav-link" href="/resort">Resorts</a>
                     </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="/user">Profile</a>
+                    </li>
                 </ul>
             </div>
-            </div class="collapse navbar-collapse form-inline col" id="navbarMain">
-            <form class="navbar-nav">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
-            </form>
-               <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom"
-                        title="Profile"><a href="/login"><i class="fa-solid fa-user fa-lg"
-                                style="color: white;"></i></a></button>
+            <div class="collapse navbar-collapse form-inline" id="navbarMain">
+                <form class="navbar-nav">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
+                </form>
+                <button class="btn login-btn pl-3 pr-4" data-toggle="tooltip" data-placement="bottom" title="Login"><a
+                        href="/login"><i class="fa-solid fa-user fa-lg" style="color: white;"></i></a></button>
             </div>
-        </nav>
-    </header>
-    <main style="background-color:white;">
-        <section>
-            <div id="map">
-            </div>
-        </section>
-        <section class="my-5 d-flex justify-content-center">
-            <div>
-                <h1 class="title">Theme Parks</h1>
-                <hr class="divider">
-            </div>
-        </section>
-        {{#each themeparks as |themePark|}}
-        <section class="row p-4 m-0 section-divide">
-            
-            <div class="col text-center">
-                <h4>{{themePark.name}}</h4>
-                <p>{{themePark.address}}</p>
-                <br>
-                <div class="p-2">
+        </div>
+    </nav>
+</header>
+<main style="background-color:white;">
+    <section>
+        <div id="map">
+        </div>
+    </section>
+    <section class="my-5 d-flex justify-content-center">
+        <div>
+            <h1 class="title">Theme Parks</h1>
+            <hr class="divider">
+        </div>
+    </section>
+    {{#each themeparks as |themePark|}}
+    <section class="row p-4 m-0 section-divide">
+
+        <div class="col text-center">
+            <h4>{{themePark.name}}</h4>
+            <p>{{themePark.address}}</p>
+            <br>
+            <div class="p-2">
                 <p>{{themePark.description}}</p>
-                    <ul class="text-left">
-                        <li><b>Approxiamely {{themePark.yearlyVisits}} million visitors a year!</b></li>
-                        <li><b>Website: </b><a href="{{themePark.website}}">{{themePark.website}} </a></li>
-                        <li><b>Description Source:</b><a href="{{themePark.description_source}}"> {{themePark.description_source}}</a></li>
-                    </ul>
-                    <button class="save-attraction-btn p-1" 
-                    data-attraction_type="themePark" data-id="{{themePark}}"
-                    style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>    
-                </div>
+                <ul class="text-left">
+                    <li><b>Approxiamely {{themePark.yearlyVisits}} million visitors a year!</b></li>
+                    <li><b>Website: </b><a href="{{themePark.website}}">{{themePark.website}} </a></li>
+                    <li><b>Description Source:</b><a href="{{themePark.description_source}}">
+                            {{themePark.description_source}}</a></li>
+                </ul>
+                <button class="save-attraction-btn p-1" data-attraction_type="themePark" data-id="{{themePark}}"
+                    style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
             </div>
-            <div class="col">
-               <img src="{{themePark.image}}" class="rounded float-right" 
-                alt="Typhoon Lagoon image"
-                    style="width: 40rem">
-            </div>
-        </section>
-        {{/each}}
-       
-        {{!-- <section class="row p-4 m-0 section-divide">
-            
-            <div class="col text-center">
-                <h4>Disney’s Animal Kingdom </h4>
-                <p>2901 Osceola Pkwy, Bay Lake, FL 34747</p>
-                <br>
-                <div class="p-2">
-                    <p> At Disney’s Animal Kingdom Theme Park at Walt Disney World® Resort, you can explore throughout the day and into the night on an adventure into a world alive with magic. Visit a distant world with floating mountains or back on Earth view thousands of animals in their natural habitats — all without leaving Orlando. </p>
-                        <ul class="text-left">
-                            <li><b>Visits a year: 13.89 million</b></li>
-                            <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/animal-kingdom/">Disney’s Animal Kingdom Website </a></li>
-                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/ "> https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/ </a></li>
-                        </ul>
-                    </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
-            </div>
-            <div class="col">
+        </div>
+        <div class="col">
+            <img src="{{themePark.image}}" class="rounded float-right" alt="Typhoon Lagoon image" style="width: 40rem">
+        </div>
+    </section>
+    {{/each}}
 
-                <img src="../img/themepark2.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
-                    style="width: 40rem">
-            </div>
-        </section>
+    {{!-- <section class="row p-4 m-0 section-divide">
 
-        <section class="row p-4 m-0 section-divide">
-            
-            <div class="col text-center">
-                <h4>Epcot Walt Disney World</h4>
-                <p>200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-                <br>
-                <div class="p-2">
-                    <p>Launched in 1982, EPCOT at Walt Disney World Resort invites you to explore global culture, space, the seas and Mother Nature — not to mention the future — all without leaving present-day Orlando.</p>
-                        <ul class="text-left">
-                            <li><b>Visits a year: 12.44 million</b></li>
-                            <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/epcot/">Epcot Walt Disney World Website </a></li>
-                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/ "> https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/  </a></li>
-                        </ul>
-                    </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save This Park!</button>
+        <div class="col text-center">
+            <h4>Disney’s Animal Kingdom </h4>
+            <p>2901 Osceola Pkwy, Bay Lake, FL 34747</p>
+            <br>
+            <div class="p-2">
+                <p> At Disney’s Animal Kingdom Theme Park at Walt Disney World® Resort, you can explore throughout the
+                    day and into the night on an adventure into a world alive with magic. Visit a distant world with
+                    floating mountains or back on Earth view thousands of animals in their natural habitats — all
+                    without leaving Orlando. </p>
+                <ul class="text-left">
+                    <li><b>Visits a year: 13.89 million</b></li>
+                    <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/animal-kingdom/">Disney’s
+                            Animal Kingdom Website </a></li>
+                    <li><b>Description Source:</b><a
+                            href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/ ">
+                            https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/disneys-animal-kingdom-theme-park/
+                        </a></li>
+                </ul>
             </div>
-            <div class="col">
-                <img src="../img/themepark3.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
-                    style="width: 40rem">
-            </div>
-        </section>
+            <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+        </div>
+        <div class="col">
 
-        <section class="row p-4 m-0 section-divide">
-            
-            <div class="col text-center">
-                <h4>Universal Studios Orlando</h4>
-                <p>6000 Universal Blvd, Orlando, FL 32819</p>
-                <br>
-                <div class="p-2">
-                    <p>Play, scream and laugh with some of the biggest characters in movies, TV and pop culture at Universal Orlando Resort! In addition to three incredible theme parks, including a water theme park, Universal Orlando Resort offers entertainment, shopping and dining at Universal CityWalk, as well as onsite accommodations for every style and budget. It’s the only place in Orlando where you can soar over Hogwarts™ with Harry Potter™, swing through city streets with Spider-Man, and conquer the mighty Krakatau volcano — among other unforgettable adventures. Experience it for yourself during your next trip to Orlando!</p>
-                        <ul class="text-left">
-                            <li><b>Visits a year: 10.92 million</b></li>
-                            <li><b>Website:</b><a href="https://www.universalorlando.com/web/en/us">Universal Studios Orlando Website </a></li>
-                            <li><b>Description Source:</b><a href="https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/"> https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/ </a></li>
-                        </ul>
-                    </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)" >Save This Park!</button>
-            </div>
-            <div class="col">
-                <img src="../img/themepark4.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
-                    style="width: 40rem">
-            </div>
-        </section>
+            <img src="../img/themepark2.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                style="width: 40rem">
+        </div>
+    </section>
 
-        <section class="row p-4 m-0 section-divide">
-            
-            <div class="col text-center">
-                <h4>Disneyland Anaheim</h4>
-                <p>1313 Disneyland Dr, Anaheim, CA 92802</p>
-                <br>
-                <div class="p-2">
-                    <p> Located in the heart of Anaheim, the Disneyland® Resort offers a memorable experience for visitors of all ages. With over 60 incredible attractions, magical parades, and world-renowned treats, it’s no wonder Disneyland Park holds the title, “The Happiest Place on Earth </p>
-                        <ul class="text-left">
-                            <li><b>Visits a year: 18.66 million</b></li>
-                            <li><b>Website:</b><a href="https://disneyland.disney.go.com/">Disneyland Anaheimbsite </a></li>
-                            <li><b>Description Source:</b><a href="https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/ "> https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/  </a></li>
-                        </ul>
-                    </div>
-                    <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
-            </div>
-            <div class="col">
-                <img src="../img/themepark5.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
-                    style="width: 40rem">
-            </div>
-        </section> --}}
+    <section class="row p-4 m-0 section-divide">
 
-    </main>
+        <div class="col text-center">
+            <h4>Epcot Walt Disney World</h4>
+            <p>200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+            <br>
+            <div class="p-2">
+                <p>Launched in 1982, EPCOT at Walt Disney World Resort invites you to explore global culture, space, the
+                    seas and Mother Nature — not to mention the future — all without leaving present-day Orlando.</p>
+                <ul class="text-left">
+                    <li><b>Visits a year: 12.44 million</b></li>
+                    <li><b>Website:</b><a href="https://disneyworld.disney.go.com/destinations/epcot/">Epcot Walt Disney
+                            World Website </a></li>
+                    <li><b>Description Source:</b><a
+                            href="https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/ ">
+                            https://www.visitorlando.com/things-to-do/theme-parks/walt-disney-world-resort/epcot/ </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+        </div>
+        <div class="col">
+            <img src="../img/themepark3.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                style="width: 40rem">
+        </div>
+    </section>
+
+    <section class="row p-4 m-0 section-divide">
+
+        <div class="col text-center">
+            <h4>Universal Studios Orlando</h4>
+            <p>6000 Universal Blvd, Orlando, FL 32819</p>
+            <br>
+            <div class="p-2">
+                <p>Play, scream and laugh with some of the biggest characters in movies, TV and pop culture at Universal
+                    Orlando Resort! In addition to three incredible theme parks, including a water theme park, Universal
+                    Orlando Resort offers entertainment, shopping and dining at Universal CityWalk, as well as onsite
+                    accommodations for every style and budget. It’s the only place in Orlando where you can soar over
+                    Hogwarts™ with Harry Potter™, swing through city streets with Spider-Man, and conquer the mighty
+                    Krakatau volcano — among other unforgettable adventures. Experience it for yourself during your next
+                    trip to Orlando!</p>
+                <ul class="text-left">
+                    <li><b>Visits a year: 10.92 million</b></li>
+                    <li><b>Website:</b><a href="https://www.universalorlando.com/web/en/us">Universal Studios Orlando
+                            Website </a></li>
+                    <li><b>Description Source:</b><a
+                            href="https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/">
+                            https://www.visitorlando.com/things-to-do/theme-parks/universal-orlando-resort/ </a></li>
+                </ul>
+            </div>
+            <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+        </div>
+        <div class="col">
+            <img src="../img/themepark4.jpg" class="rounded float-right" alt="Typhoon Lagoon image"
+                style="width: 40rem">
+        </div>
+    </section>
+
+    <section class="row p-4 m-0 section-divide">
+
+        <div class="col text-center">
+            <h4>Disneyland Anaheim</h4>
+            <p>1313 Disneyland Dr, Anaheim, CA 92802</p>
+            <br>
+            <div class="p-2">
+                <p> Located in the heart of Anaheim, the Disneyland® Resort offers a memorable experience for visitors
+                    of all ages. With over 60 incredible attractions, magical parades, and world-renowned treats, it’s
+                    no wonder Disneyland Park holds the title, “The Happiest Place on Earth </p>
+                <ul class="text-left">
+                    <li><b>Visits a year: 18.66 million</b></li>
+                    <li><b>Website:</b><a href="https://disneyland.disney.go.com/">Disneyland Anaheimbsite </a></li>
+                    <li><b>Description Source:</b><a
+                            href="https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/ ">
+                            https://www.visitanaheim.org/things-to-do/theme-parks/disneyland/ </a></li>
+                </ul>
+            </div>
+            <button class="p-1" style="background-color: rgba(168, 218, 241, 0.308)">Save This Park!</button>
+        </div>
+        <div class="col">
+            <img src="../img/themepark5.jpeg" class="rounded float-right" alt="Typhoon Lagoon image"
+                style="width: 40rem">
+        </div>
+    </section> --}}
+
+</main>
 
 
 
@@ -185,17 +213,17 @@
         var markers = [
             {
                 coords: { lat: 28.3658, lng: -81.5296 },
-                content: '<h2>Magic Kingdom Walt Disney World, Address: Lake Buena Vista, FL 32836 </h2>' 
+                content: '<h2>Magic Kingdom Walt Disney World, Address: Lake Buena Vista, FL 32836 </h2>'
             },
             {
-                coords: { lat: 28.3747, lng: -81.5494},
-                content: '<h2>Epcot Walt Disney World, 200 Epcot Center Dr, Lake Buena Vista, FL 32830 </h2>' 
+                coords: { lat: 28.3747, lng: -81.5494 },
+                content: '<h2>Epcot Walt Disney World, 200 Epcot Center Dr, Lake Buena Vista, FL 32830 </h2>'
 
             },
 
             {
-                coords: { lat: 28.3597, lng: - 81.5916},
-                content: '<h2> Disney’s Animal Kingdom, Address: 2901 Osceola Pkwy, Bay Lake, FL 34747 </h2>' 
+                coords: { lat: 28.3597, lng: - 81.5916 },
+                content: '<h2> Disney’s Animal Kingdom, Address: 2901 Osceola Pkwy, Bay Lake, FL 34747 </h2>'
 
             },
 
@@ -245,4 +273,3 @@
 
     }
 </script>
-
